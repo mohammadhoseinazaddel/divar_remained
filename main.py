@@ -25,10 +25,13 @@ def details_extractor(district=None):
 
 def detail_token_extractor(district):
     name_file = "divar_crawler/statics/%s.json" % district
-    with open(name_file, 'r') as f:
-        json_data = json.load(f)
-    token_list = json_data[district]
-    find_detail_with_token(district, token_list)
+    try:
+        with open(name_file, 'r') as f:
+            json_data = json.load(f)
+        token_list = json_data[district]
+        find_detail_with_token(district, token_list)
+    except:
+        print("%s.json doenot exist" % (district))
 
 
 if __name__ == "__main__":
