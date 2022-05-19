@@ -5,7 +5,7 @@ import json
 
 
 def find_detail_with_token(district, token_list):
-    with open('divar_crawler/statics/csv/%s.csv' % district, 'a') as data_file:
+    with open('divar_crawler/divar_crawler/statics/csv/%s.csv' % district, 'a') as data_file:
         csv_writer = csv.writer(data_file)
         csv_writer.writerow(["slug", "category_title", "city",
                              "district", "latin_city", "meter", "built_year", "total_cost", "price_per_meter", "floor",
