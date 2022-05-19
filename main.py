@@ -24,7 +24,7 @@ def details_extractor(district=None):
 
 
 def detail_token_extractor(district):
-    name_file = "divar_crawler/statics/%s.json" % district
+    name_file = "divar_crawler/divar_crawler/statics/%s.json" % district
     try:
         with open(name_file, 'r') as f:
             json_data = json.load(f)
